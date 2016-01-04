@@ -1,0 +1,34 @@
+@import 'boh/test';
+
+$test : red;
+@alias {
+  fs: font-size;
+  bg: background;
+}
+
+@lost cycle none;
+
+@font-face {
+  font-family: 'My Font';
+  font-path: '/my/font/file';
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+	// boh
+	display: flex;
+	lost-column: 1/2;
+	//background: $test;
+	position: absolute 0;
+	box-shadow: 1px, 1px, 1px, #000;
+	fs: 16px;
+	.main {
+		display: flex;
+		//opacity: 0.8;
+		color: rgba(#d7d7d7, 0.8);
+    &:before {
+      content: ' ';
+    }
+	}
+}

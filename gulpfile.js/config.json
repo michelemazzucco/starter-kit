@@ -1,0 +1,16 @@
+{
+  "dir": {
+    "src": "./site",
+    "dest": "./dist"
+  },
+  "opts": {
+    "renamemin": {
+      "suffix": ".min"
+    }
+  },
+  "postcssPlugins": {
+    "autoprefixer": {
+      "browsers": ["last 4 versions", "ie >= 8", "ios >= 6", "android >= 4.4", "bb >= 10"]
+    }
+  } 
+}
