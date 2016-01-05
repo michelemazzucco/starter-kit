@@ -1,7 +1,7 @@
-### Starterkit
-Super simple static website starter kit.
+## Starterkit
+Super simple static website starter kit with PostCss.
 
-# Getting started
+#### Getting started
 ```
 $ npm install --global gulp
 $ npm install
