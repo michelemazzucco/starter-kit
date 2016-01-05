@@ -7,7 +7,7 @@ var gulp = require('gulp'),
     concat = require('gulp-concat');
 
 gulp.task('bundle', function() {
-  gulp.src(config.dir.src + '/scripts/**/*.js')
+  gulp.src(config.dir.src + '/js/**/*.js')
     .pipe(concat('bundle.js'))
     .pipe(uglify({mangle: false, compress:true}))
     .pipe(size(config.tasks.size.opts))
