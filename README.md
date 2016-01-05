@@ -1,5 +1,5 @@
 ## Starterkit
-Super simple static website starter kit with PostCSS.
+Super easy static website starter kit with PostCSS.
 
 PostCSS plugins installed:
 * [Autoprefixer](https://github.com/postcss/autoprefixer)
