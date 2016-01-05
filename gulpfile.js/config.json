@@ -9,15 +9,26 @@
     }
   },
   "tasks": {
-    "concat": {
-      "src": {
-        "npm-src": ["./node_modules/jquery/dist/jquery.js"]
+    "vendor": {
+      "src": [
+        "./node_modules/jquery/dist/jquery.js", 
+        "./node_modules/gsap/src/uncompressed/TweenMax.js"
+      ]
+    },
+    "size": {
+      "opts": {
+        "showFiles": true
       }
     }
   },
   "postcssPlugins": {
     "autoprefixer": {
-      "browsers": ["last 4 versions", "ie >= 8", "ios >= 6", "android >= 4.4", "bb >= 10"]
+      "browsers": [
+        "last 4 versions",
+        "ie >= 8", "ios >= 6",
+        "android >= 4.4", 
+        "bb >= 10"
+      ]
     }
   } 
 }
