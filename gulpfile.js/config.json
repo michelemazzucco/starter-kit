@@ -8,6 +8,13 @@
       "suffix": ".min"
     }
   },
+  "tasks": {
+    "concat": {
+      "src": {
+        "npm-src": ["./node_modules/jquery/dist/jquery.js"]
+      }
+    }
+  },
   "postcssPlugins": {
     "autoprefixer": {
       "browsers": ["last 4 versions", "ie >= 8", "ios >= 6", "android >= 4.4", "bb >= 10"]
