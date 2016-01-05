@@ -4,5 +4,6 @@ var gulp = require('gulp'),
     
 gulp.task('watch', function() {
     gulp.watch('site/scss/**/*.scss', ['styles']);
+    gulp.watch('site/js/**/*.js', ['bundle']);
     gulp.watch('site/**/*.html', ['minify-html']);
 });
