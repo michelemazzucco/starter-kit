@@ -18,19 +18,16 @@ var autoprefixer = require('autoprefixer'),
     cssnano = require('cssnano');
 
 gulp.task('styles', function() {
+    
     var plugins = [
         autoprefixer(config.postcssPlugins.autoprefixer.browsers),
+        rucksack({fallbacks: true}),
         lost,
-        rucksack({
-            fallbacks: true, // active fallbacks for old browsers
-        }),
         cssnano,
     ];
 
     gulp.src(config.dir.src + '/scss/**/*.scss')
-        .pipe(plumber({
-            errorHandler: notifyError
-        }))
+        .pipe(plumber({errorHandler: notifyError}))
         .pipe(sourcemaps.init())
         .pipe(sass())
         .pipe(postcss(plugins))
