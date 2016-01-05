@@ -35,7 +35,7 @@ gulp.task('styles', function() {
         .pipe(sass())
         .pipe(postcss(plugins))
         .pipe(rename(config.opts.renamemin))
-        .pipe(sourcemaps.write('../maps'))
+        .pipe(sourcemaps.write('./maps'))
         .pipe(size())
         .pipe(gulp.dest(config.dir.dest + '/css'))
 });
