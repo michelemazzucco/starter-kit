@@ -36,5 +36,5 @@ gulp.task('styles', function() {
         .pipe(size(config.tasks.size.opts))
         .pipe(sourcemaps.write('./maps'))
         .pipe(gulp.dest(config.dir.dest + '/css'))
-        .pipe(browserSync.stream())
+        .pipe(browserSync.stream()) 
 });
