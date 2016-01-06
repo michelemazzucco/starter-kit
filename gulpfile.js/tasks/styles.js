@@ -9,7 +9,8 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     rename = require('gulp-rename'),
     postcss = require('gulp-postcss'),
-    sourcemaps = require('gulp-sourcemaps');
+    sourcemaps = require('gulp-sourcemaps'),
+    browserSync = require('browser-sync');
 
 // PostCSS plugins
 var autoprefixer = require('autoprefixer'),
@@ -35,4 +36,5 @@ gulp.task('styles', function() {
         .pipe(size(config.tasks.size.opts))
         .pipe(sourcemaps.write('./maps'))
         .pipe(gulp.dest(config.dir.dest + '/css'))
+        .pipe(browserSync.stream())
 });
