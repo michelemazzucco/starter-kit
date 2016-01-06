@@ -1,4 +1,4 @@
-## Starterkit
+## Starter kit
 Super easy static website starter kit with PostCSS.
 
 PostCSS plugins installed:
