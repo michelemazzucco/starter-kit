@@ -4,7 +4,8 @@ var config = require('../config');
 var gulp = require('gulp'),
     size = require('gulp-size'),
     uglify = require('gulp-uglify'),
-    concat = require('gulp-concat');
+    concat = require('gulp-concat'),
+    browserSync = require('browser-sync');
 
 gulp.task('bundle', function() {
   gulp.src(config.dir.src + '/js/**/*.js')
@@ -12,4 +13,5 @@ gulp.task('bundle', function() {
     .pipe(uglify({mangle: false, compress:true}))
     .pipe(size(config.tasks.size.opts))
     .pipe(gulp.dest('dist/js'))
+    .pipe(browserSync.stream())
 });
