@@ -24,7 +24,9 @@ body {
 body {
   // boh
   display: flex;
-  lost-column: 1/2;
+  lost-column: 1/2 0;
+  lost-align: center;
+  text-align: center;
   //background: $test;
   z-index: 59038459;
   position: absolute 0;
