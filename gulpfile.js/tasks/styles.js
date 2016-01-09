@@ -24,7 +24,7 @@ gulp.task('styles', function() {
         autoprefixer(config.postcssPlugins.autoprefixer.browsers),
         rucksack({fallbacks: true}),
         lost,
-        cssnano,
+        cssnano({autoprefixer: false, discardComments: {removeAll: true}}),
     ];
 
     gulp.src(config.dir.src + '/scss/**/*.scss')
