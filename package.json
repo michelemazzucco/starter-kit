@@ -6,7 +6,8 @@
     "type": "git"
   },
   "scripts": {
-    "dev": "gulp",
+    "gulp": "gulp",
+    "dev": "gulp clean && gulp",
     "clean": "gulp clean"
   },
   "author": {

@@ -13,5 +13,5 @@ PostCSS plugins installed:
 ```
 $ npm install --global gulp
 $ npm install
-$ gulp
+$ npm run gulp
 ```
