@@ -1,4 +1,4 @@
-$ciao: green;
+$ciao : #ddd;
 $test : red;
 
 body {
@@ -18,7 +18,6 @@ body {
   font-path: '/my/font/file';
   font-weight: normal;
   font-style: normal;
-  
 }
 
 body {
@@ -35,7 +34,7 @@ body {
   .main {
     display: flex;
     z-index: 590;
-    //opacity: 0.8;
+    opacity: 0.8;
     h1 {
       color: red;
     }
