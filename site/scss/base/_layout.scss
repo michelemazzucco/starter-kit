@@ -1,0 +1,44 @@
+body,
+html {
+  background: #f4f4f4;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+
+@font-face {
+  font-family: 'My Font';
+  font-path: '/my/font/file';
+  font-weight: normal;
+  font-style: normal;
+}
+
+main {
+  lost-align: center;
+  height: 100%;
+  section {
+    background: #fff;
+    padding: 30px;
+    border-radius: 3px;
+    box-shadow: 0 3px 15px rgba(#000, .1);
+    text-align: center;
+    transition: all .2s ease-in-sine;
+    &:hover {
+      transform: rotate(100deg);
+      transform-origin: center center;
+    }
+    h1, h2 {
+      margin: 5px 0;
+    }
+    h1 {
+      font-size: 2em;
+    }
+    h2 {
+      font-size: 1em;
+      color: #bbb;
+      font-weight: 400;
+    }
+  }
+}
