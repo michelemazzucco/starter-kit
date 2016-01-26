@@ -21,10 +21,10 @@ var autoprefixer = require('autoprefixer'),
 gulp.task('styles', function() {
     
     var plugins = [
-        autoprefixer(config.postcssPlugins.autoprefixer.browsers),
-        rucksack({fallbacks: true}),
-        cssnano({safe: true}),
         lost,
+        rucksack({fallbacks: true}),
+        autoprefixer(config.postcssPlugins.autoprefixer.browsers),
+        cssnano({safe: true})
     ];
 
     gulp.src(config.dir.src + '/scss/**/*.scss')
