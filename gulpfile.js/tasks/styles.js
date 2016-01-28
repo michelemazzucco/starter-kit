@@ -16,6 +16,8 @@ var gulp = require('gulp'),
 var autoprefixer = require('autoprefixer'),
     lost = require('lost'),
     rucksack = require('rucksack-css'),
+    reporter = require('reporter'),
+    stylelint = require('stylelint'),
     cssnano = require('cssnano');
 
 gulp.task('styles', function() {
@@ -30,6 +32,12 @@ gulp.task('styles', function() {
     gulp.src(config.dir.src + '/scss/**/*.scss')
         .pipe(plumber({errorHandler: notifyError}))
         .pipe(sourcemaps.init())
+        .pipe(postcss([
+            stylelint,
+            reporter({ clearMessages: true, throwError: true })
+        ],
+        { syntax: scss })
+        )
         .pipe(sass())
         .pipe(postcss(plugins))
         .pipe(rename(config.opts.renamemin))
