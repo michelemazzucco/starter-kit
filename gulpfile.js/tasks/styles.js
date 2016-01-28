@@ -24,19 +24,24 @@ var autoprefixer = require('autoprefixer'),
 gulp.task('styles', function() {
     
     var plugins = [
-        stylelint,
         lost,
         rucksack({fallbacks: true}),
         autoprefixer(config.postcssPlugins.autoprefixer.browsers),
-        cssnano({safe: true}),
-        reporter({ clearMessages: true })
+        cssnano({safe: true})
     ];
 
     gulp.src(config.dir.src + '/scss/**/*.scss')
         .pipe(plumber({errorHandler: notifyError}))
         .pipe(sourcemaps.init())
-        .pipe(postcss(plugins, {syntax: scss}))
+        .pipe(
+            postcss([
+                stylelint(),
+                reporter({ clearMessages: true, throwError: true })
+            ],
+            { syntax: scss })
+        )
         .pipe(sass())
+        .pipe(postcss(plugins))
         .pipe(rename(config.opts.renamemin))
         .pipe(size(config.tasks.size.opts))
         .pipe(sourcemaps.write('./maps'))
