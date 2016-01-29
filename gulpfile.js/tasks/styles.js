@@ -7,6 +7,7 @@ var gulp = require('gulp'),
     plumber = require('gulp-plumber'),
     size = require('gulp-size'),
     sass = require('gulp-sass'),
+    scss = require("postcss-scss"),
     rename = require('gulp-rename'),
     postcss = require('gulp-postcss'),
     sourcemaps = require('gulp-sourcemaps'),
@@ -16,6 +17,8 @@ var gulp = require('gulp'),
 var autoprefixer = require('autoprefixer'),
     lost = require('lost'),
     rucksack = require('rucksack-css'),
+    reporter = require('postcss-reporter'),
+    stylelint = require('stylelint'),
     cssnano = require('cssnano');
 
 gulp.task('styles', function() {
@@ -30,6 +33,13 @@ gulp.task('styles', function() {
     gulp.src(config.dir.src + '/scss/**/*.scss')
         .pipe(plumber({errorHandler: notifyError}))
         .pipe(sourcemaps.init())
+        .pipe(
+            postcss([
+                stylelint(),
+                reporter({ clearMessages: true, throwError: true })
+            ],
+            { syntax: scss })
+        )
         .pipe(sass())
         .pipe(postcss(plugins))
         .pipe(rename(config.opts.renamemin))
