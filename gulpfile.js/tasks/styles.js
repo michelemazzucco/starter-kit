@@ -21,7 +21,7 @@ var autoprefixer = require('autoprefixer'),
     stylelint = require('stylelint'),
     cssnano = require('cssnano');
 
-gulp.task('styles', function() {
+gulp.task('styles', ['cssLint'], function() {
     
     var plugins = [
         lost,
@@ -33,13 +33,6 @@ gulp.task('styles', function() {
     gulp.src(config.dir.src + '/scss/**/*.scss')
         .pipe(plumber({errorHandler: notifyError}))
         .pipe(sourcemaps.init())
-        .pipe(
-            postcss([
-                stylelint(),
-                reporter({ clearMessages: true, throwError: true })
-            ],
-            { syntax: scss })
-        )
         .pipe(sass())
         .pipe(postcss(plugins))
         .pipe(rename(config.opts.renamemin))
