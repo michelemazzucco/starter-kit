@@ -6,8 +6,8 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync');
 
 gulp.task('minify-html', function() {
-  gulp.src(config.dir.src + '/**/*.html')
+  gulp.src(config.src.html)
     .pipe(htmlmin({collapseWhitespace: true, removeComments: true}))
-    .pipe(gulp.dest(config.dir.dest))
+    .pipe(gulp.dest(config.dest.root))
     .pipe(browserSync.stream())
 });

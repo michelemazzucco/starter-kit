@@ -6,8 +6,8 @@ var gulp = require('gulp'),
     concat = require('gulp-concat');
 
 gulp.task('vendor', function() {
-  gulp.src(config.tasks.concat.npmsrc)
+  gulp.src(config.tasks.vendor.src)
     .pipe(concat('vendor.js'))
     .pipe(size(config.tasks.size.opts))
-    .pipe(gulp.dest('dist/js'))
+    .pipe(gulp.dest(config.dist.js))
 });

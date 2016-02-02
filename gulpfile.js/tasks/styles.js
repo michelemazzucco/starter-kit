@@ -30,7 +30,7 @@ gulp.task('styles', ['cssLint'], function() {
         cssnano({safe: true})
     ];
 
-    gulp.src(config.dir.src + '/scss/**/*.scss')
+    gulp.src(config.src.scss)
         .pipe(plumber({errorHandler: notifyError}))
         .pipe(sourcemaps.init())
         .pipe(sass())
@@ -38,6 +38,6 @@ gulp.task('styles', ['cssLint'], function() {
         .pipe(rename(config.opts.renamemin))
         .pipe(size(config.tasks.size.opts))
         .pipe(sourcemaps.write('./maps'))
-        .pipe(gulp.dest(config.dir.dest + '/css'))
+        .pipe(gulp.dest(config.dest.css))
         .pipe(browserSync.stream()) 
 });

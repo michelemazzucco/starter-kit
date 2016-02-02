@@ -6,8 +6,8 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync');
 
 gulp.task('images', function() {
-  gulp.src('./site/images/*')
+  gulp.src(config.src.images)
     .pipe(imagemin())
-    .pipe(gulp.dest('./dist/images'))
+    .pipe(gulp.dest(config.dest.images))
     .pipe(browserSync.stream())
 });

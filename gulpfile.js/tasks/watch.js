@@ -1,9 +1,11 @@
 'use strict';
+var config = require('../config');
+
 var gulp = require('gulp'),
     watch = require('gulp-watch');
     
 gulp.task('watch', function() {
-    gulp.watch('site/scss/**/*.scss', ['styles']);
-    gulp.watch('site/js/**/*.js', ['bundle']);
-    gulp.watch('site/**/*.html', ['minify-html']);
+    gulp.watch(config.src.scss, ['styles']);
+    gulp.watch(config.src.js, ['bundle']);
+    gulp.watch(config.src.html, ['minify-html']);
 });

@@ -8,10 +8,10 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync');
 
 gulp.task('bundle', function() {
-  gulp.src(config.dir.src + '/js/**/*.js')
+  gulp.src(config.src.js)
     .pipe(concat('bundle.js'))
     .pipe(uglify({mangle: false, compress:true}))
     .pipe(size(config.tasks.size.opts))
-    .pipe(gulp.dest('dist/js'))
+    .pipe(gulp.dest(config.dest.js))
     .pipe(browserSync.stream())
 });

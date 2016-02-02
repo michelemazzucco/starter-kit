@@ -17,6 +17,6 @@ gulp.task('cssLint', function() {
       reporter({clearMessages: true})
   ];
 
-  gulp.src(config.dir.src + '/scss/**/*.scss')
+  gulp.src(config.src.scss)
     .pipe(postcss(plugins, {syntax: scss}))
 });
