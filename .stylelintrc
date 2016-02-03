@@ -1,8 +1,11 @@
 {
   "rules": {
+    "string-quotes": "double",
+    "color-hex-case": "lower",
     "color-no-invalid-hex": true,
-    "declaration-colon-space-after": "always",
-    "max-empty-lines": 2,
-    "number-leading-zero": "always"
+    "number-leading-zero": "never",
+    "number-max-precision": 3,
+    "number-no-trailing-zeros": true,
+    "number-zero-length-no-unit": true
   }
 }
