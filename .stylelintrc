@@ -6,6 +6,12 @@
     "number-leading-zero": "never",
     "number-max-precision": 3,
     "number-no-trailing-zeros": true,
-    "number-zero-length-no-unit": true
+    "number-zero-length-no-unit": true,
+    "function-calc-no-unspaced-operator": true,
+    "function-comma-newline-after": "never-multi-line",
+    "function-comma-space-after": "always",
+    "function-parentheses-space-inside": "never",
+    "function-url-quotes": "double",
+    "value-no-vendor-prefix": true
   }
 }
