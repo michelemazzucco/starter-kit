@@ -8,6 +8,7 @@
     "url": "https://github.com/michelemazzucco/starter-kit"
   },
   "scripts": {
+    "start": "gulp",
     "gulp": "gulp",
     "dev": "gulp clean && gulp",
     "clean": "gulp clean"
