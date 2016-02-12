@@ -33,10 +33,9 @@
   "postcssPlugins": {
     "autoprefixer": {
       "browsers": [
-        "last 4 versions",
-        "ie >= 8", "ios >= 6",
-        "android >= 4.4", 
-        "bb >= 10"
+        "last 10 versions",
+        "Explorer >= 8",
+        "Firefox > 3"
       ]
     }
   } 
