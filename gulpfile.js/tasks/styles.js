@@ -27,7 +27,7 @@ gulp.task('styles', ['cssLint'], function() {
         lost,
         rucksack({fallbacks: true}),
         autoprefixer(config.postcssPlugins.autoprefixer.browsers),
-        cssnano({safe: true})
+        cssnano({safe: true, discardComments: {removeAll: true}})
     ];
 
     gulp.src(config.src.scss)
