@@ -4,13 +4,13 @@
     "scss": "./site/scss/**/*.scss",
     "js": "./site/js/**/*.js",
     "html": "./site/**/*.html",
-    "image": "./site/images/*"
+    "images": "./site/images/*"
   },
   "dest": {
     "root": "./dist",
     "css": "./dist/css",
     "js": "./dist/js",
-    "image": "./dist/images"
+    "images": "./dist/images"
   },
   "opts": {
     "renamemin": {
