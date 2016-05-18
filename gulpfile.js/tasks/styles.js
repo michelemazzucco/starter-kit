@@ -18,7 +18,6 @@ var autoprefixer = require('autoprefixer'),
     lost = require('lost'),
     rucksack = require('rucksack-css'),
     reporter = require('postcss-reporter'),
-    stylelint = require('stylelint'),
     cssnano = require('cssnano');
 
 gulp.task('styles', ['cssLint'], function() {
