@@ -3,6 +3,7 @@ var config = require('../config');
 
 var gulp = require('gulp'),
     size = require('gulp-size'),
+    uglify = require('gulp-uglify'),
     concat = require('gulp-concat');
 
 gulp.task('vendor', function() {
