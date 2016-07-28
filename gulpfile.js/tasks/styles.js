@@ -1,27 +1,27 @@
 'use strict';
-var config = require('../config'),
-    notifyError = require('../lib/notifyError');
+var config = require('../config');
+var notifyError = require('../lib/notifyError');
 
-var gulp = require('gulp'),
-    notify = require('gulp-notify'),
-    plumber = require('gulp-plumber'),
-    size = require('gulp-size'),
-    sass = require('gulp-sass'),
-    scss = require("postcss-scss"),
-    rename = require('gulp-rename'),
-    postcss = require('gulp-postcss'),
-    sourcemaps = require('gulp-sourcemaps'),
-    browserSync = require('browser-sync');
+var gulp = require('gulp');
+var notify = require('gulp-notify');
+var plumber = require('gulp-plumber');
+var size = require('gulp-size');
+var sass = require('gulp-sass');
+var scss = require("postcss-scss");
+var rename = require('gulp-rename');
+var postcss = require('gulp-postcss');
+var sourcemaps = require('gulp-sourcemaps');
+var browserSync = require('browser-sync');
 
 // PostCSS plugins
-var autoprefixer = require('autoprefixer'),
-    lost = require('lost'),
-    rucksack = require('rucksack-css'),
-    reporter = require('postcss-reporter'),
-    cssnano = require('cssnano');
+var autoprefixer = require('autoprefixer');
+var lost = require('lost');
+var rucksack = require('rucksack-css');
+var reporter = require('postcss-reporter');
+var cssnano = require('cssnano');
 
 gulp.task('styles', ['cssLint'], function() {
-    
+
     var plugins = [
         lost,
         rucksack({fallbacks: true}),
@@ -38,5 +38,5 @@ gulp.task('styles', ['cssLint'], function() {
         .pipe(size(config.tasks.size.opts))
         .pipe(sourcemaps.write('./maps'))
         .pipe(gulp.dest(config.dest.css))
-        .pipe(browserSync.stream()) 
+        .pipe(browserSync.stream())
 });

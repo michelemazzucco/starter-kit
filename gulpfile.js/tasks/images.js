@@ -1,9 +1,9 @@
 'use strict';
 var config = require('../config');
 
-var gulp = require('gulp'),
-    imagemin = require('gulp-imagemin'),
-    browserSync = require('browser-sync');
+var gulp = require('gulp');
+var imagemin = require('gulp-imagemin');
+var browserSync = require('browser-sync');
 
 gulp.task('images', function() {
   gulp.src(config.src.images)

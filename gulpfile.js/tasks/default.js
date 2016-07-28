@@ -1,4 +1,11 @@
 'use strict';
 var gulp = require('gulp');
 
-gulp.task('default', ['styles', 'minify-html', 'watch', 'bundle', 'vendor', 'browserSync']);
+gulp.task('default', [
+  'styles',
+  'minify-html',
+  'watch',
+  'bundle',
+  'vendor',
+  'browserSync'
+]);

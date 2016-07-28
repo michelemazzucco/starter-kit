@@ -1,9 +1,9 @@
 'use strict';
 var config = require('../config');
 
-var gulp = require('gulp'),
-    htmlmin = require('gulp-htmlmin'),
-    browserSync = require('browser-sync');
+var gulp = require('gulp');
+var htmlmin = require('gulp-htmlmin');
+var browserSync = require('browser-sync');
 
 gulp.task('minify-html', function() {
   gulp.src(config.src.html)
