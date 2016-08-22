@@ -1,4 +1,4 @@
-# Starter kit [![Dependency Status][ds-image]][ds]
+# Starter kit [![Dependency Status][ds-image]][ds] [![devDependencies Status][dev-ds-image]][dev-ds]
 Super easy static website starter kit with PostCSS.
 
 PostCSS plugins installed:
@@ -20,3 +20,5 @@ $ npm start
 [CSSnano]:      https://github.com/ben-eb/cssnano
 [ds]:           https://david-dm.org/michelemazzucco/starter-kit
 [ds-image]:     https://david-dm.org/michelemazzucco/starter-kit.svg
+[dev-ds]:       https://david-dm.org/michelemazzucco/starter-kit?type=dev
+[dev-ds-image]: https://david-dm.org/michelemazzucco/starter-kit/dev-status.svg

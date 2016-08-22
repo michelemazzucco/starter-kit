@@ -12,6 +12,11 @@ var rename = require('gulp-rename');
 var postcss = require('gulp-postcss');
 var sourcemaps = require('gulp-sourcemaps');
 var browserSync = require('browser-sync');
+var gulpif = require('gulp-if');
+
+var gutil = require('gulp-util');
+
+var env = gutil.env.env || 'prod';
 
 // PostCSS plugins
 var autoprefixer = require('autoprefixer');
@@ -36,7 +41,7 @@ gulp.task('styles', ['cssLint'], function() {
         .pipe(postcss(plugins))
         .pipe(rename(config.opts.renamemin))
         .pipe(size(config.tasks.size.opts))
-        .pipe(sourcemaps.write('./maps'))
+        .pipe(gulpif(env === 'local', sourcemaps.write('./maps')))
         .pipe(gulp.dest(config.dest.css))
         .pipe(browserSync.stream())
 });
